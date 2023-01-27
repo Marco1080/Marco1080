@@ -42,9 +42,3 @@ Web Developer
 <a href="http://www.github.com/Marco1080"><img src="https://github-readme-streak-stats.herokuapp.com/?user=Marco1080&stroke=ffffff&background=1c1917&ring=84cc16&fire=84cc16&currStreakNum=ffffff&currStreakLabel=84cc16&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
 
 <a href="http://www.github.com/Marco1080"><img src="https://github-readme-activity-graph.cyclic.app/graph?username=Marco1080&bg_color=1c1917&color=ffffff&line=a855f7&point=ffffff&area_color=1c1917&area=true&hide_border=true&custom_title=GitHub%20Commits%20Graph" alt="GitHub Commits Graph" /></a>
-
-<a href="https://github.com/Marco1080" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Marco1080&langs_count=10&title_color=84cc16&text_color=ffffff&icon_color=a855f7&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
-
-<b>Top Repositories</b>
-
-<div width="100%" align="center"></div><br /><br /><br /><br /><br /><br /><br />
