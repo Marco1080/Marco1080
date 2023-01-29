@@ -1,4 +1,4 @@
-Hi ![](https://github.com/seanprashad/slackmoji/blob/master/emoji/llamas/llama-awesome-gif.gif)My name is Hi I´m Marco
+Hi ![](https://github.com/seanprashad/slackmoji/blob/master/emoji/shiblob/shiblob-photo.png)My name is Marco
 ====================================================================================================================================
 
 Web Developer
