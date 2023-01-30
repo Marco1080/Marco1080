@@ -6,6 +6,7 @@ Web Developer
 
 * 🌍  I'm based in Canary Islands
 * 🖥️  See my portfolio at [here](http://marcoantonio2000.departamentoinformaticajmpp.com)
+* 📱   My LinkedIn [here](https://www.linkedin.com/in/marco-antonio-lópez-expósito-407b3b263/?original_referer=)
 * ✉️  You can contact me at [tonilopezexposito@gmail.com](mailto:tonilopezexposito@gmail.com)
 * 🧠  I'm learning Javascript, Laravel, Reatc .
 * 🤝  I'm open to collaborating on any amazing project .
