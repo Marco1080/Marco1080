@@ -1,172 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Neon Generator</title>
-      <link rel="shortcut icon" href="./favicon.ico" type="image/png">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <link rel="stylesheet" href="./libs/font-awesome.min.css">
-      <link rel="stylesheet" href="./libs/codemirror/codemirror.css">
-      <link rel="stylesheet" href="./libs/codemirror/theme/darcula.css">
-      <link rel="stylesheet" href="./libs/colorpicker/css/bootstrap-colorpicker.min.css">
-      <link rel="stylesheet" href="./libs/slider/css/ion.rangeSlider.css">
-      <link rel="stylesheet" href="./libs/slider/css/ion.rangeSlider.skin.css">
-      <link rel="stylesheet" href="./style.css">
-      <style id="animationKeyframes"></style>
-   </head>
-   <body>
-      <div id="preloader"></div>
-      <div class="jumbotron jumbotron-fluid">
-         <div class="container">
-            <h1 class="display-4">Neon Light Generator for CSS</h1>
-            <div class="custom-control custom-switch">
-               <input type="checkbox" class="custom-control-input" id="darkSwitch">
-               <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
-            </div>
-         </div>
-      </div>
-      <a href="https://github.com/YaroslavWeb/Neon-Generator" class="github-corner">
-         <svg width="80" height="80" viewBox="0 0 250 250"
-            style="fill:#212529; color:#fff; position: absolute; top: 0; border: 0; right: 0;">
-            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-            <path
-               d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-               fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-            <path
-               d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-               fill="currentColor" class="octo-body"></path>
-         </svg>
-      </a>
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <div class="card">
-                  <div class="card-header">Preview</div>
-                  <div class="card-body unset-pg">
-                     <div class="card-text">
-                        <div id="text-preview" class="text-center neon"></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-6 mt-4">
-               <div class="card mb-4">
-                  <div class="card-header">
-                     <ul class="nav nav-tabs card-header-tabs" role="tablist">
-                        <li class="nav-item">
-                           <a class="nav-link active" id="emoji-tab" data-toggle="tab" href="#emoji" role="tab"
-                              aria-controls="emoji" aria-selected="true">Emoji</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" id="fa-tab" data-toggle="tab" href="#fa" role="tab"
-                              aria-controls="fa" aria-selected="false">FontAwesome</a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="card-body tab-content">
-                     <div class="tab-pane fade show active" id="emoji" role="tabpanel" aria-labelledby="emoji-tab">
-                        <div class="row" id="emoji-row"></div>
-                     </div>
-                     <div class="tab-pane fade" id="fa" role="tabpanel" aria-labelledby="fa-tab">
-                        <div>
-                           <div class="row" id="fa-row"></div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="card-footer text-muted">
-                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                           <span class="input-group-text">Text</span>
-                        </div>
-                        <input id="input-value-preview" type="text" class="form-control">
-                        <div class="input-group-append">
-                           <button type="button" id="clear-value-preview" class="input-group-text btn btn-light">
-                           <i class="fas fa-trash"></i>
-                           </button>
-                        </div>
-                     </div>
-                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                           <span class="input-group-text">Color</span>
-                        </div>
-                        <input id="colorpicker" data-color="#007BFF" type="text" class="form-control input-lg">
-                     </div>
-                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                           <label class="input-group-text" for="inputGroupSelect01">Fonts</label>
-                        </div>
-                        <select class="custom-select" id="select-family-preview">
-                           <option selected value="Cursive">Cursive</option>
-                           <option value="Consolas">Consolas</option>
-                           <option value="Bahnschrift">Bahnschrift</option>
-                           <option value="Garamond">Garamond</option>
-                        </select>
-                     </div>
-                     <div class="row range-container mt-3">
-                        <label for="input-size-preview" class="col-sm-2 input-group-text range-label">Size</label>
-                        <div class="col-sm-10 mt-3">
-                           <input type="text" id="input-size-preview">
-                        </div>
-                     </div>
-                     <div class="row range-container mt-3">
-                        <label for="input-blur-preview" class="col-sm-2 input-group-text range-label">Blur</label>
-                        <div class="col-sm-10 mt-3">
-                           <input type="text" id="input-blur-preview">
-                        </div>
-                     </div>
-                     <div class="row range-container mt-3 mb-2">
-                        <label for="input-delay-preview" class="col-sm-2 input-group-text range-label">Delay</label>
-                        <div class="col-sm-10 mt-3">
-                           <input type="text" id="input-delay-preview">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-6 row-grid">
-               <div class="card mb-4">
-                  <div class="card-header">
-                     CSS
-                     <div class="pull-right">
-                        <button type="button" class="btn btn-light btn-sm copy-css"><i
-                           class="fa fa-copy"></i></button>
-                     </div>
-                  </div>
-                  <div class="card-body unset-pg">
-                     <div class="card-text">
-                        <div id="code-css-preview"></div>
-                     </div>
-                  </div>
-               </div>
-               <div class="card">
-                  <div class="card-header">
-                     HTML
-                     <div class="pull-right">
-                        <button type="button" class="btn btn-light btn-sm copy-html"><i
-                           class="fa fa-copy"></i></button>
-                     </div>
-                  </div>
-                  <div class="card-body unset-pg">
-                     <div class="card-text">
-                        <div id="code-html-preview"></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-md-12">
-               <div class="text-center mt-lg mb-4">Developed by <a href="https://www.instagram.com/yaroslav.tatarinov.dev/">YaroslavWeb</a> & <a href="https://crashmax.ru">crashmax</a> with &#10084;
-            </div>
-         </div>
-      </div>
-   </body>
-   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-   <script src="./libs/codemirror/codemirror.js"></script>
-   <script src="./libs/codemirror/modes/css.js"></script>
-   <script src="./libs/codemirror/modes/xml.js"></script>
-   <script src="./libs/colorpicker/js/bootstrap-colorpicker.min.js"></script>
-   <script src="./libs/slider/js/ion.rangeSlider.min.js"></script>
-   <script src="./script.js"></script>
-</html>
+Hi ![](https://github.com/seanprashad/slackmoji/blob/master/emoji/llamas/llama-awesome-gif.gif)My name is Marco
+====================================================================================================================================
+![](https://komarev.com/ghpvc/?username=your-github-marco1080)
+Web Developer
+-------------
+
+* 🌍  I'm based in Canary Islands
+* 🖥️  See my portfolio at [here](http://marcoantonio2000.departamentoinformaticajmpp.com)
+* 📱   My LinkedIn [here](https://www.linkedin.com/in/marco-antonio-lópez-expósito-407b3b263/?original_referer=)
+* ✉️  You can contact me at [tonilopezexposito@gmail.com](mailto:tonilopezexposito@gmail.com)
+* 🧠  I'm learning everyday something new.
+* 🤝  I'm open to collaborating on any amazing project .
+
+### Skills
+
+
+<p align="left">
+<a href="https://www.oracle.com/java/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg" width="36" height="36" alt="Java" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" /></a>
+<a href="https://www.php.net/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" width="36" height="36" alt="PHP" /></a>
+<a href="https://www.python.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" width="36" height="36" alt="Python" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
+<a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a>
+<a href="https://sass-lang.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sass-colored.svg" width="36" height="36" alt="Sass" /></a>
+<a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="TailwindCSS" /></a>
+<a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg" width="36" height="36" alt="Bootstrap" /></a>
+<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mysql-colored.svg" width="36" height="36" alt="MySQL" /></a>
+<a href="https://laravel.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/laravel-colored.svg" width="36" height="36" alt="Laravel" /></a>
+<a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" width="36" height="36" alt="Figma" /></a>
+  
+  <a href="https://jquery.com/" target="_blank" rel="noreferrer"><img src="https://github.com/devicons/devicon/blob/master/icons/jquery/jquery-original.svg" width="36" height="36" alt="Jquery" /></a>
+
+<a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg" width="36" height="36" alt="Docker" /></a>
+</p>
+
+
+### Socials
+
+<p align="left"> <a href="https://discord.com/users/6152" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/discord.svg" width="32" height="32" /></a> <a href="https://www.github.com/Marco1080" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" /></a></p>
+
+### Badges
+
+<b>My GitHub Stats</b>
+
+<a href="http://www.github.com/Marco1080"><img src="https://github-readme-stats.vercel.app/api?username=Marco1080&show_icons=true&hide=&count_private=true&title_color=84cc16&text_color=ffffff&icon_color=a855f7&bg_color=1c1917&hide_border=true&show_icons=true" alt="Marco1080's GitHub stats" /></a>
+
+<a href="http://www.github.com/Marco1080"><img src="https://github-readme-streak-stats.herokuapp.com/?user=Marco1080&stroke=ffffff&background=1c1917&ring=84cc16&fire=84cc16&currStreakNum=ffffff&currStreakLabel=84cc16&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
+
+<a href="http://www.github.com/Marco1080"><img src="https://github-readme-activity-graph.cyclic.app/graph?username=Marco1080&bg_color=1c1917&color=ffffff&line=a855f7&point=ffffff&area_color=1c1917&area=true&hide_border=true&custom_title=GitHub%20Commits%20Graph" alt="GitHub Commits Graph" /></a>
