@@ -33,7 +33,7 @@ Web Developer
   
     <a href="[[https://www.figma.com/](https://jquery.com/)](https://www.docker.com/)" target="_blank" rel="noreferrer"><img src="[https://github.com/devicons/devicon/blob/master/icons/jquery/jquery-original.svg](https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg  )" width="36" height="36" alt="Figma" /></a>
   
-
+<a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="(https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg  )" width="36" height="36" alt="Figma" /></a>
 </p>
 
 
