@@ -30,7 +30,7 @@ Web Developer
   
   <a href="https://jquery.com/" target="_blank" rel="noreferrer"><img src="https://github.com/devicons/devicon/blob/master/icons/jquery/jquery-original.svg" width="36" height="36" alt="Jquery" /></a>
 
-<a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="(https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg  )" width="36" height="36" alt="Docker" /></a>
+<a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg" width="36" height="36" alt="Docker" /></a>
 </p>
 
 
