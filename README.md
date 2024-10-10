@@ -10,16 +10,18 @@
 ![](https://github-readme-streak-stats.herokuapp.com/?user=marco1080&theme=tokyonight&hide_border=true)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=marco1080&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 
-### ✍️ Random Dev Quote
-<div align="center">
-  <blockquote style="font-size:1.5em; font-style:italic; color: #00FFFF; background-color:#2d2d2d; padding:20px; border-radius:10px;">
-    "The trick is to never stop looking. There's always another secret."
-    <br><br>
-    <span style="color:#FF1493;">- Kelsier</span>
-  </blockquote>
+### ✍️ Random fact
+<div align="center" style="background-color:#1a1a1a; border-radius:10px; padding:20px; max-width:400px;">
+  <p style="font-size:30px; color:#FFD700; font-family:Arial, sans-serif;">“</p>
+  <p style="font-size:1.25em; color:#00FFFF; font-family:Arial, sans-serif; text-align:center;">
+    The trick is to never stop looking. There's always another secret.
+  </p>
+  <p style="font-size:30px; color:#FFD700; font-family:Arial, sans-serif;">”</p>
+  <p style="color:#FF1493; font-family:Arial, sans-serif; text-align:right;">
+    - Kelsier
+  </p>
 </div>
 
-![Quote](https://quotes-github-readme.vercel.app/api?type=vertical&theme=radical)
 
 
 ### 🔝 Top Contributed Repo
