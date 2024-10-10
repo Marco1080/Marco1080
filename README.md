@@ -11,7 +11,12 @@
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=marco1080&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 
 ### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=radical)
+> "The trick is to never stop looking. There's always another secret."
+>
+> - Kelsier
+
+![Quote](https://quotes-github-readme.vercel.app/api?type=vertical&theme=radical)
+
 
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=marco1080&limit=5&theme=gotham&combine_all_yearly_contributions=true)
