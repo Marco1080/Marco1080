@@ -11,7 +11,7 @@
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=marco1080&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 
 ### ✍️ Random fact
-<div align="center" style="background-color:#1a1a1a; border-radius:10px; padding:20px; max-width:400px;">
+<div style="background-color:#1a1a1a; border-radius:10px; padding:20px; max-width:400px;">
   <p style="font-size:30px; color:#FFD700; font-family:Arial, sans-serif;">“</p>
   <p style="font-size:1.25em; color:#00FFFF; font-family:Arial, sans-serif; text-align:center;">
     The trick is to never stop looking. There's always another secret.
