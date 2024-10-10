@@ -11,9 +11,13 @@
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=marco1080&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 
 ### ✍️ Random Dev Quote
-> "The trick is to never stop looking. There's always another secret."
->
-> - Kelsier
+<div align="center">
+  <blockquote style="font-size:1.5em; font-style:italic; color: #00FFFF; background-color:#2d2d2d; padding:20px; border-radius:10px;">
+    "The trick is to never stop looking. There's always another secret."
+    <br><br>
+    <span style="color:#FF1493;">- Kelsier</span>
+  </blockquote>
+</div>
 
 ![Quote](https://quotes-github-readme.vercel.app/api?type=vertical&theme=radical)
 
