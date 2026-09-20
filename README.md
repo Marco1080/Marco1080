@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./profile-banner.svg" width="100%" alt="Marco Antonio López Expósito — Junior Software Developer">
+  <img src="./assets/profile-banner.svg" width="100%" alt="Marco Antonio López Expósito — Junior Software Developer">
 </p>
 
 <p align="center">
@@ -70,7 +70,7 @@ public class Marco {
 ## `> a_line_i_keep`
 
 <p align="center">
-  <img src="./kelsier-quote.svg" width="100%" alt="The trick is to never stop looking. There's always another secret. — Kelsier">
+  <img src="./assets/kelsier-quote.svg" width="100%" alt="The trick is to never stop looking. There's always another secret. — Kelsier">
 </p>
 
 <p align="center">
