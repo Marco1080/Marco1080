@@ -59,8 +59,8 @@ public class Marco {
 ## `> github_activity`
 
 <p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=Marco1080&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&border_color=3D3420&bg_color=090909&title_color=F5C842&text_color=F5F3EB&icon_color=F5C842&rank_icon=github" alt="Marco's GitHub statistics">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Marco1080&layout=compact&langs_count=8&hide_border=false&border_color=3D3420&bg_color=090909&title_color=F5C842&text_color=F5F3EB" alt="Marco's most used languages">
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Marco1080&theme=github_dark&title_color=F5C842&text_color=F5F3EB&bg_color=090909&border_color=3D3420&icon_color=F5C842&animation=rise&duration=2" alt="Marco's GitHub statistics">
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Marco1080&theme=github_dark&title_color=F5C842&text_color=F5F3EB&bg_color=090909&border_color=3D3420&chart_color=F5C842&animation=load&duration=2" alt="Marco's most used languages">
 </p>
 
 <p align="center">
